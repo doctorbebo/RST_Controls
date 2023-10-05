@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://RTS Controls/RTS_Camera.gd" type="Script" id=1]
-[ext_resource path="res://RTS Controls/Clicker.gd" type="Script" id=2]
+[ext_resource path="res://Grid/Clicker.gd" type="Script" id=2]
 
 [node name="RTS_Controls" type="Spatial"]
 transform = Transform( 0.994706, 0, -0.102758, 0, 1, 0, 0.102758, 0, 0.994706, 0, 0, 0 )

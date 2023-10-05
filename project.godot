@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "CollisionShape",
 "class": "Clickable",
 "language": "GDScript",
-"path": "res://RTS Controls/Clickable.gd"
+"path": "res://Grid/Clickable.gd"
 } ]
 _global_script_class_icons={
 "Clickable": ""

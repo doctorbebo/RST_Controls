@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://RTS Controls/Clickable.gd" type="Script" id=1]
+[ext_resource path="res://Grid/Clickable.gd" type="Script" id=1]
+[ext_resource path="res://Grid/Placement Node.gd" type="Script" id=2]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -16,10 +17,14 @@ transform = Transform( 0.98, 0, 0, 0, 1, 0, 0, 0, 0.98, -3, 0, -1 )
 mesh = SubResource( 1 )
 skeleton = NodePath("../..")
 material/0 = SubResource( 2 )
+script = ExtResource( 2 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
+collision_mask = 2
 physics_material_override = SubResource( 3 )
 
 [node name="Clickable" type="CollisionShape" parent="StaticBody"]
 shape = SubResource( 4 )
 script = ExtResource( 1 )
+
+[connection signal="on_clicked" from="StaticBody/Clickable" to="." method="_on_Clickable_on_clicked"]

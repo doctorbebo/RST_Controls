@@ -17,7 +17,7 @@ albedo_color = Color( 0, 0, 0, 1 )
 [sub_resource type="SpatialMaterial" id=7]
 albedo_color = Color( 0.0901961, 0.0705882, 0.0705882, 1 )
 
-[sub_resource type="CubeMesh" id=2]
+[sub_resource type="SphereMesh" id=10]
 
 [sub_resource type="SpatialMaterial" id=6]
 albedo_color = Color( 0.580392, 0.529412, 0.529412, 1 )
@@ -42,7 +42,8 @@ material/0 = SubResource( 5 )
 [node name="Gunner" type="Spatial" parent="."]
 
 [node name="Cock Pit" type="MeshInstance" parent="Gunner"]
-transform = Transform( 0.5, 0, -1.98952e-14, 0, 0.5, 0, 1.98952e-14, 0, 0.5, 0, 3, 0 )
+transform = Transform( 0.25, 0, -9.9476e-15, 0, 0.25, 0, 9.9476e-15, 0, 0.25, 0, 2.3, 0 )
+visible = false
 mesh = SubResource( 4 )
 skeleton = NodePath("../..")
 material/0 = SubResource( 8 )
@@ -51,22 +52,22 @@ material/0 = SubResource( 8 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 
 [node name="Barrel Node" type="MeshInstance" parent="Gunner/Barrel"]
-transform = Transform( 0.2, 0, 0, 0, -4.37114e-08, -0.2, 0, 1, -8.74228e-09, 0, 0, -1 )
+transform = Transform( 0.1, 0, 0, 0, -2.18557e-08, -0.1, 0, 0.5, -4.37114e-09, 0, -0.717767, -0.598522 )
 mesh = SubResource( 3 )
 skeleton = NodePath("../../Tower")
 material/0 = SubResource( 7 )
 
 [node name="Bullet Pos" type="Position3D" parent="Gunner/Barrel"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0032568, -0.00948, -2.49765 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0032568, -0.723683, -1.40375 )
 
 [node name="Tower" type="MeshInstance" parent="Gunner"]
-transform = Transform( 0.7, 0, 0, 0, 1, 0, 0, 0, 0.7, 0, 2, 0 )
-mesh = SubResource( 2 )
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 1, 0 )
+mesh = SubResource( 10 )
 skeleton = NodePath("../..")
 material/0 = SubResource( 6 )
 
 [node name="Area" type="Area" parent="."]
-transform = Transform( 0.5, 0, 0, 0, 0.125, 0, 0, 0, 0.5, 0, 0, 0 )
+transform = Transform( 0.2, 0, 0, 0, 0.125, 0, 0, 0, 0.2, 0, 1.712, 0 )
 collision_mask = 2
 input_ray_pickable = false
 monitorable = false
